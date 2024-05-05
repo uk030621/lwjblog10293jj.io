@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const postElement = document.createElement("div");
         postElement.classList.add("blog-post");
         postElement.innerHTML = `
-          <h2>${post.title}</h2>
+          <h2 class = "tiiitle">${post.title}</h2>
           <p>${post.content}</p>
           <button class="delete-btn" data-title="${post.title}">Delete</button>
         `;
@@ -149,6 +149,27 @@ navigator.webkitPersistentStorage.requestQuota(5 * 1024 * 1024, function(granted
 function errorHandler(error) {
   console.error('Error:', error);
 }
+function updateDateTime() {
+  const currentDate = new Date();
+  const dateElement = document.getElementById("datetime");
+  
+  // Options for formatting the date
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  
+  // Format the date and time separately
+  const formattedDate = currentDate.toLocaleDateString(undefined, dateOptions);
+  const formattedTime = currentDate.toLocaleTimeString(undefined, timeOptions);
+  
+  // Update the date element with both date and time
+  dateElement.textContent = `${formattedDate} ${formattedTime}`;
+}
+
+// Call updateDateTime function initially
+updateDateTime();
+
+// Set interval to update every second
+setInterval(updateDateTime, 1000);
 
 });
 
