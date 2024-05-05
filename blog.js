@@ -115,5 +115,26 @@ document.addEventListener("DOMContentLoaded", function() {
         loadBlogPostsIndexedDB(); // Reload posts after deletion
       };
     }
-  });
+  document.addEventListener("DOMContentLoaded", function() {
+  // Your existing code here...
+  
+  // Request persistent file system storage
+  navigator.webkitPersistentStorage.requestQuota(5 * 1024 * 1024, function(grantedBytes) {
+    window.webkitRequestFileSystem(PERSISTENT, grantedBytes, function(fs) {
+      // File system access granted, now you can read/write files
+      // Example: create a file and write data to it
+      fs.root.getFile('data.txt', {create: true}, function(fileEntry) {
+        fileEntry.createWriter(function(fileWriter) {
+          var dataBlob = new Blob(['Hello, World!'], {type: 'text/plain'});
+          fileWriter.write(dataBlob);
+        });
+      });
+    }, errorHandler);
+  }, errorHandler);
+
+  function errorHandler(error) {
+    console.error('File System API error:', error);
+  }
+});
+
   
