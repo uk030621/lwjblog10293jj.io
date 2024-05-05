@@ -1,24 +1,47 @@
+body{
+  height: 100vh;
+  
+  background-image: url('vista.jpg');
+  background-size: cover; /* This ensures the background image covers the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.container{
+  padding: 20px;
+  margin-right: 20px;
+}
+
 /* Styles for header */
 header {
-  background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
+  border-radius: 25px;
+  opacity: 0.9;
 }
 
 /* Styles for blog post */
-.blog-post {
+.blog-posts {
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
+  width: 80%; /* Adjust the width according to your layout */
+  overflow: auto; /* or overflow: scroll; */
+  
 }
 
-.blog-post h2 {
+h2 {
   font-size: 1.5em;
+  color: white;
+  margin-bottom: 8px;
 }
 
-.blog-post p {
+p {
   font-size: 1em;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 /* Styles for form */
@@ -26,15 +49,35 @@ header {
   margin-top: 20px;
 }
 
+input#post-title{
+  background-color: lightblue;
+}
+
+textarea#post-content{
+  background-color: lightblue;
+}
+
+/* Define a style for the placeholder text in Microsoft Edge */
+::placeholder {
+  color: black; /* Change the color to your desired color */
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.7;
+}
+
+
+
 #blog-form input,
 #blog-form textarea,
 #blog-form button {
   display: block;
-  width: 100%;
+  
+  width: 98.8%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1em;
   border: 1px solid #ddd;
+  border-radius: 15px;
+  
 }
 
 #blog-form button {
@@ -42,7 +85,32 @@ header {
   color: #fff;
   border: none;
   font-size: 1em;
+  width: 100%;
   cursor: pointer;
+}
+
+#blog-form button:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.delete-btn{
+  background-color: #007bff;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+div#datetime{
+  color: white
+}
+
+.delete-btn:hover{
+  background-color: white;
+  color: black;
 }
 
 /* Responsive design for smaller screens */
