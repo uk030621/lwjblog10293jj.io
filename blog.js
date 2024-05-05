@@ -115,26 +115,42 @@ document.addEventListener("DOMContentLoaded", function() {
         loadBlogPostsIndexedDB(); // Reload posts after deletion
       };
     }
-  document.addEventListener("DOMContentLoaded", function() {
-  // Your existing code here...
+// Request persistent file system storage
+navigator.webkitPersistentStorage.requestQuota(5 * 1024 * 1024, function(grantedBytes) {
+  console.log("Storage quota granted:", grantedBytes, "bytes");
   
-  // Request persistent file system storage
-  navigator.webkitPersistentStorage.requestQuota(5 * 1024 * 1024, function(grantedBytes) {
-    window.webkitRequestFileSystem(PERSISTENT, grantedBytes, function(fs) {
-      // File system access granted, now you can read/write files
-      // Example: create a file and write data to it
-      fs.root.getFile('data.txt', {create: true}, function(fileEntry) {
-        fileEntry.createWriter(function(fileWriter) {
-          var dataBlob = new Blob(['Hello, World!'], {type: 'text/plain'});
-          fileWriter.write(dataBlob);
-        });
-      });
+  // Access file system
+  window.webkitRequestFileSystem(PERSISTENT, grantedBytes, function(fs) {
+    console.log("File system access granted");
+    
+    // Create file 'data.txt' and write data to it
+    fs.root.getFile('data.txt', {create: true}, function(fileEntry) {
+      console.log("File 'data.txt' created successfully");
+      
+      fileEntry.createWriter(function(fileWriter) {
+        console.log("File writer created");
+        
+        var dataBlob = new Blob(['Hello, World!'], {type: 'text/plain'});
+        
+        fileWriter.onwrite = function() {
+          console.log("Data written to file 'data.txt' successfully");
+        };
+        
+        fileWriter.onerror = function(error) {
+          console.error("Error writing data to file 'data.txt':", error);
+        };
+        
+        fileWriter.write(dataBlob);
+      }, errorHandler);
     }, errorHandler);
   }, errorHandler);
+}, errorHandler);
 
-  function errorHandler(error) {
-    console.error('File System API error:', error);
-  }
+function errorHandler(error) {
+  console.error('Error:', error);
+}
+
 });
+
 
   
