@@ -1,6 +1,5 @@
 body{
-  height: 100vh;
-  
+  height: 100%;
   background-image: url('vista.jpg');
   background-size: cover; /* This ensures the background image covers the entire viewport */
   background-position: center; /* Center the background image */
@@ -50,11 +49,11 @@ p {
 }
 
 input#post-title{
-  background-color: lightblue;
+  background-color: whitesmoke;
 }
 
 textarea#post-content{
-  background-color: lightblue;
+  background-color: whitesmoke;
 }
 
 /* Define a style for the placeholder text in Microsoft Edge */
@@ -67,10 +66,8 @@ textarea#post-content{
 
 
 #blog-form input,
-#blog-form textarea,
-#blog-form button {
+#blog-form textarea {
   display: block;
-  
   width: 98.8%;
   margin-bottom: 10px;
   padding: 10px;
@@ -81,11 +78,14 @@ textarea#post-content{
 }
 
 #blog-form button {
-  background-color: #007bff;
+  background-color: gray;
+  width: 20%;
+  border-radius: 15px;
+  padding: 10px;
+  height: auto;
   color: #fff;
   border: none;
   font-size: 1em;
-  width: 100%;
   cursor: pointer;
 }
 
@@ -96,7 +96,7 @@ textarea#post-content{
 }
 
 .delete-btn{
-  background-color: #007bff;
+  background-color: gray;
   border-radius: 10px;
   color: white;
   border: none;
