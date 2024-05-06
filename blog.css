@@ -12,18 +12,19 @@ body{
   margin-right: 20px;
 }
 
+
 /* Styles for header */
 header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 20%;
   color: #fff;
   padding: 20px;
   text-align: center;
   border-radius: 25px;
   opacity: 0.7;
-  background-color: #333; /* Change the background color to your preference */
+  
   z-index: 1000; /* Ensure it's above other content */
 }
 
@@ -78,7 +79,7 @@ textarea#post-content{
 #blog-form input,
 #blog-form textarea {
   display: block;
-  width: 98.8%;
+  width: 80%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1em;
