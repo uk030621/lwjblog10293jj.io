@@ -4,7 +4,6 @@ body{
   background-size: cover; /* This ensures the background image covers the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
-  padding-top: 120px;
 }
 
 .container{
@@ -12,20 +11,13 @@ body{
   margin-right: 20px;
 }
 
-
 /* Styles for header */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20%;
   color: #fff;
   padding: 20px;
   text-align: center;
   border-radius: 25px;
-  opacity: 0.7;
-  
-  z-index: 1000; /* Ensure it's above other content */
+  opacity: 0.9;
 }
 
 /* Styles for blog post */
@@ -68,24 +60,20 @@ textarea#post-content{
 ::placeholder {
   color: black; /* Change the color to your desired color */
   font-family: Arial, Helvetica, sans-serif;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
-.post-date{
-  color: white;
-  opacity: 0.8;
-}
+
 
 #blog-form input,
 #blog-form textarea {
   display: block;
-  width: 80%;
+  width: 98.8%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1em;
   border: 1px solid #ddd;
   border-radius: 15px;
-  opacity: 0.9;
   
 }
 
@@ -107,7 +95,6 @@ textarea#post-content{
   cursor: pointer;
 }
 
-
 .delete-btn{
   background-color: gray;
   border-radius: 10px;
@@ -115,7 +102,6 @@ textarea#post-content{
   border: none;
   padding: 5px;
   cursor: pointer;
-  justify-content: center;
 }
 
 div#datetime{
