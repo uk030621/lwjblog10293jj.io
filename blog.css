@@ -4,6 +4,7 @@ body{
   background-size: cover; /* This ensures the background image covers the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
+  padding-top: 120px;
 }
 
 .container{
