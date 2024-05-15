@@ -1,28 +1,26 @@
 body{
   min-height: 100vh;
+  margin: 0px;
   background-image: url('vista.jpg');
   background-size: cover; /* This ensures the background image covers the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
-  padding-top: 120px;
 }
 
 .container{
-  padding: 20px;
-  margin-right: 20px;
+  padding-left: 20px;
+  margin-right: 0px;
 }
 
 /* Styles for header */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  padding: 0px;
+  text-align: left;
   border-radius: 25px;
   opacity: 0.9;
+  margin-left: 0px;
   /*background-color: #333; /* Change the background color to your preference */
   z-index: 1000; /* Ensure it's above other content */
 }
@@ -70,18 +68,20 @@ textarea#post-content{
   opacity: 0.7;
 }
 
-
+#blog-form{
+  margin-top: 0px;
+  width: 100%;
+}
 
 #blog-form input,
 #blog-form textarea {
   display: block;
-  width: 98.8%;
+  width: 80%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1em;
   border: 1px solid #ddd;
-  border-radius: 15px;
-  
+  border-radius: 15px; 
 }
 
 #blog-form button {
@@ -111,8 +111,16 @@ textarea#post-content{
   cursor: pointer;
 }
 
-div#datetime{
-  color: white
+h1{
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+h4{
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  
 }
 
 .delete-btn:hover{
