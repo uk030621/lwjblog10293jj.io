@@ -8,20 +8,25 @@ body{
 }
 
 .container{
-  padding-left: 20px;
-  margin-right: 0px;
+  padding: 20px;
+  width: 80%;
 }
 
 /* Styles for header */
 header {
-  width: 100%;
+  position: fixed;
+  width: 50%;
   color: #fff;
-  padding: 0px;
+  padding: 10px;
   text-align: left;
-  border-radius: 25px;
-  margin-left: 0px;
+  border-radius: 0px;
+  margin-left: 10px;
   /*background-color: #333; /* Change the background color to your preference */
   /*z-index: 1000; /* Ensure it's above other content */
+}
+
+main#blog-posts{
+  margin-top: 300px;
 }
 
 /* Styles for blog post */
@@ -49,7 +54,9 @@ p {
 
 /* Styles for form */
 #blog-form {
+  position: fixed;
   margin-top: 20px;
+  padding-top: 120px;
 }
 
 input#post-title{
