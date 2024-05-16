@@ -15,7 +15,7 @@ body{
 /* Styles for header */
 header {
   position: fixed;
-  width: 50%;
+  width: 60%;
   color: #fff;
   padding: 10px;
   text-align: left;
@@ -127,12 +127,6 @@ h1{
   color: #fff;
 }
 
-h4{
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  
-}
 
 .delete-btn:hover{
   background-color: white;
