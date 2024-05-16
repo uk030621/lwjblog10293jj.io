@@ -15,7 +15,7 @@ body{
 /* Styles for header */
 header {
   position: fixed;
-  width: 60%;
+  width: 80%;
   color: #fff;
   padding: 10px;
   text-align: left;
@@ -126,7 +126,6 @@ h1{
 
 h4#datetime{
   color: #fff;
-  background-color: red;
 }
 
 /*h4{
