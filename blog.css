@@ -26,7 +26,7 @@ header {
 }
 
 main#blog-posts{
-  margin-top: 300px;
+  margin-top: 280px;
 }
 
 /* Styles for blog post */
@@ -56,7 +56,7 @@ p {
 #blog-form {
   position: fixed;
   margin-top: 20px;
-  padding-top: 120px;
+  padding-top: 20px;
 }
 
 input#post-title{
@@ -75,8 +75,10 @@ textarea#post-content{
 }
 
 #blog-form{
-  margin-top: 0px;
+  position: fixed;
+  margin-top: 100px;
   width: 100%;
+  padding-top: 0px;
 }
 
 #blog-form input,
@@ -125,7 +127,11 @@ h1{
 
 
 h4#datetime{
+  position: fixed;
   color: #fff;
+  margin-top: 60px;
+  margin-left: 10px;
+
 }
 
 /*h4{
