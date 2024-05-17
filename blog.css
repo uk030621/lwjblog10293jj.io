@@ -1,10 +1,10 @@
 body{
   min-height: 100vh;
   margin: 0px;
-  background-image: url('vista.jpg');
+  /*background-image: url('vista.jpg');
   background-size: cover; /* This ensures the background image covers the entire viewport */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  /*background-position: center; /* Center the background image */
+  /*background-repeat: no-repeat; /* Prevent the background image from repeating */
 }
 
 .container{
@@ -17,7 +17,7 @@ body{
 header {
   position: fixed;
   width: 80%;
-  color: #fff;
+  color: black;
   padding: 10px;
   text-align: left;
   border-radius: 0px;
@@ -42,13 +42,13 @@ main#blog-posts{
 
 h2 {
   font-size: 1.5em;
-  color: white;
+  color: black;
   margin-bottom: 8px;
 }
 
 p {
   font-size: 1em;
-  color: white;
+  color: black;
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -127,11 +127,11 @@ h1{
 }
 
 
-p#datetime{
+#datetime{
   position: fixed;
   top: 10px; /* Ensures it's visible at the top */
   left: 30px; /* Ensures it's aligned properly */
-  color: #fff;
+  color: black;
   padding: 0px;
   margin: 0; /* Reset margins */
   z-index: 1000; /* Ensure it’s on top of other elements */
@@ -157,4 +157,3 @@ p#datetime{
     font-size: 0.9em;
   }
 }
-
