@@ -51,8 +51,6 @@ p {
   color: white;
   margin-top: 0;
   margin-bottom: 8px;
-  margin-left: 30px;
-  margin-top: 5px;
 }
 
 /* Styles for form */
@@ -129,15 +127,15 @@ h1{
 }
 
 
-/*p#datetime{
+p#datetime{
   position: fixed;
+  top: 10px; /* Ensures it's visible at the top */
+  left: 30px; /* Ensures it's aligned properly */
   color: #fff;
   padding: 0px;
-  margin-top: 10px;
-  margin-right: 30px;
-  margin-left: 30px;
-
-}*/
+  margin: 0; /* Reset margins */
+  z-index: 1000; /* Ensure it’s on top of other elements */
+}
 
 /*h4{
   color: white;
