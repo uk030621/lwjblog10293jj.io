@@ -7,19 +7,25 @@
   <link rel="stylesheet" href="blog.css">
 </head>
 <body>
-  <div id="datetime"></div>
-  <div class="container">
+  
+  <div class = "container">
+    <div id="datetime"></div> 
     <header>
-      <h1>Personal Log</h1>
+      <h1>Personal Log</h1> 
     </header>
-    <main id="blog-posts"></main>
+
+    </main>
     <form id="blog-form">
       <input type="text" id="post-title" placeholder="Log Title" maxlength="100">
       <textarea id="post-content" placeholder="Content" maxlength="200"></textarea>
       <button type="submit">Add Log Item</button>
     </form>
-  </div>
+
+
+    <main id="blog-posts">
+    <!-- Blog posts will be dynamically loaded here -->
+
+    </div>
   <script src="blog.js"></script>
 </body>
 </html>
-
