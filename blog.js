@@ -152,6 +152,10 @@ function errorHandler(error) {
 function updateDateTime() {
   const currentDate = new Date();
   const dateElement = document.getElementById("datetime");
+  if (!dateElement) {
+    console.error("Date element not found");
+    return;
+  }
   
   // Options for formatting the date
   const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -163,6 +167,8 @@ function updateDateTime() {
   
   // Update the date element with both date and time
   dateElement.textContent = `${formattedDate} ${formattedTime}`;
+  
+  console.log(`Date and Time Updated: ${dateElement.textContent}`);
 }
 
 // Call updateDateTime function initially
