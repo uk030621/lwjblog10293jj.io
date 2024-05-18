@@ -156,4 +156,9 @@ h1{
   #blog-form button {
     font-size: 0.9em;
   }
+  #datetime {
+    top: 5px;
+    left: 10px;
+    font-size: 0.9em; /* Adjust font size if necessary */
+  }
 }
