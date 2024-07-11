@@ -173,7 +173,7 @@ window.onload = function() {
   dateElement.textContent = `${formattedDate} ${formattedTime}`;
   
   console.log(`Date and Time Updated: ${dateElement.textContent}`);
-}
+});
 
 // Call updateDateTime function initially
 //updateDateTime();
@@ -181,7 +181,7 @@ window.onload = function() {
 // Set interval to update every second
 //setInterval(updateDateTime, 1000);
 
-});
+//});
 
 
   
