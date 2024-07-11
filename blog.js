@@ -150,12 +150,16 @@ function errorHandler(error) {
   console.error('Error:', error);
 }
 function updateDateTime() {
-  const currentDate = new Date();
-  const dateElement = document.getElementById("datetime");
-  if (!dateElement) {
-    console.error("Date element not found");
-    return;
-  }
+  var datetimeElement = document.getElementById('datetime');
+  var now = new Date();
+  var dateTimeString = now.toLocaleString(); // Adjust format as needed
+  datetimeElement.innerHTML = 'Current Date and Time: ' + dateTimeString;
+}
+
+window.onload = function() {
+  updateDateTime(); // Initial update
+  setInterval(updateDateTime, 1000); // Update every second
+};
   
   // Options for formatting the date
   const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -172,10 +176,10 @@ function updateDateTime() {
 }
 
 // Call updateDateTime function initially
-updateDateTime();
+//updateDateTime();
 
 // Set interval to update every second
-setInterval(updateDateTime, 1000);
+//setInterval(updateDateTime, 1000);
 
 });
 
