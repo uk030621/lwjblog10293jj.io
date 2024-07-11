@@ -18,7 +18,7 @@ header {
   position: fixed;
   width: 80%;
   color: black;
-  padding: 10px;
+  padding: 0px;
   text-align: left;
   border-radius: 0px;
   margin-left: 0px;
@@ -56,8 +56,8 @@ p {
 /* Styles for form */
 #blog-form {
   position: fixed;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 input#post-title{
@@ -77,7 +77,7 @@ textarea#post-content{
 
 #blog-form{
   position: fixed;
-  margin-top: 70px;
+  margin-top: 50px;
   width: 100%;
   padding-top: 0px;
 }
@@ -123,19 +123,19 @@ textarea#post-content{
 
 h1{
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 
-#datetime{
+/*#datetime{
   position: fixed;
   top: 10px; /* Ensures it's visible at the top */
-  left: 30px; /* Ensures it's aligned properly */
-  color: black;
+  /*left: 30px; /* Ensures it's aligned properly */
+  /*color: black;
   padding: 0px;
   margin: 0; /* Reset margins */
-  z-index: 1000; /* Ensure it’s on top of other elements */
-}
+ /* z-index: 1000; /* Ensure it’s on top of other elements */
+/*}*/
 
 /*h4{
   color: white;
@@ -149,6 +149,14 @@ h1{
   color: black;
 }
 
+#datetime {
+  color: darkgrey;
+  font-size: small;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
+
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
   #blog-form input,
@@ -156,9 +164,9 @@ h1{
   #blog-form button {
     font-size: 0.9em;
   }
-  #datetime {
+  /*#datetime {
     top: 5px;
     left: 10px;
     font-size: 0.9em; /* Adjust font size if necessary */
-  }
+  /*}*/
 }
